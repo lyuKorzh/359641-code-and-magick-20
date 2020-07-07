@@ -1,5 +1,4 @@
 
-
 'use strict';
 var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
@@ -40,7 +39,7 @@ window.renderStatistics = function (ctx) {
   var maxTime = getMaxElement(time);
 
   for (var i = 0; i < players.length; i += 1) {
-    var barHeight = Maht.floor((BAR_HEIGTH * time[i]) / maxTime);
+    var barHeight = Math.floor(BAR_HEIGTH * time[i]) / maxTime;
     ctx.fillStyle = 'rgba(0, 0, 0, 1)';
     ctx.fillText('Point' + (1 + i), CLOUD_X + BAR_WIDTH + (BAR_WIDTH + BAR_IDENT) * i, CLOUD_Y + HEIGHT_TEXT + BAR_HEIGTH - barHeight - GAP - FONT_GAP);
     ctx.fillText(players[i], CLOUD_X + BAR_WIDTH + (BAR_WIDTH + BAR_IDENT) * i, CLOUD_HEIGHT - GAP);
@@ -53,6 +52,4 @@ window.renderStatistics = function (ctx) {
         barHeight);
   }
 };
-
-
 
