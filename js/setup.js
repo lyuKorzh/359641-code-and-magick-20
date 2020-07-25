@@ -65,4 +65,4 @@ for (var i = 0; i < wizards.length; i += 1) {
 }
 
 semilarListElement.appendChild(fragment);
-/* userDialog.querySelector('.setup-semilar').classList.remove('hidden'); */
+
